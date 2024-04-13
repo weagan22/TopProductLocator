@@ -76,6 +76,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CATIA_Interface.vb" />
     <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +99,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ProductFile.vb" />
+    <Compile Include="ProductFileComparer.vb" />
+    <Compile Include="RunLocate.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainForm.resx">
