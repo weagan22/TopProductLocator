@@ -26,16 +26,16 @@ Partial Class MainForm
         Me.Box_FilePath = New System.Windows.Forms.GroupBox()
         Me.Txt_FilePath = New System.Windows.Forms.TextBox()
         Me.LayoutPanel_PathButton = New System.Windows.Forms.TableLayoutPanel()
-        Me.Btn_GetTopProd = New System.Windows.Forms.Button()
-        Me.LayoutPanel_Global = New System.Windows.Forms.TableLayoutPanel()
         Me.Box_TopProds = New System.Windows.Forms.GroupBox()
         Me.List_OutValues = New System.Windows.Forms.ListBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Btn_GetTopProd = New System.Windows.Forms.Button()
+        Me.LayoutPanel_Global = New System.Windows.Forms.TableLayoutPanel()
         Me.Box_FilePath.SuspendLayout()
         Me.LayoutPanel_PathButton.SuspendLayout()
-        Me.LayoutPanel_Global.SuspendLayout()
         Me.Box_TopProds.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
+        Me.LayoutPanel_Global.SuspendLayout()
         Me.SuspendLayout()
         '
         'Box_FilePath
@@ -73,33 +73,6 @@ Partial Class MainForm
         Me.LayoutPanel_PathButton.Size = New System.Drawing.Size(478, 130)
         Me.LayoutPanel_PathButton.TabIndex = 0
         '
-        'Btn_GetTopProd
-        '
-        Me.Btn_GetTopProd.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Btn_GetTopProd.Enabled = False
-        Me.Btn_GetTopProd.Location = New System.Drawing.Point(3, 3)
-        Me.Btn_GetTopProd.Name = "Btn_GetTopProd"
-        Me.Btn_GetTopProd.Size = New System.Drawing.Size(138, 44)
-        Me.Btn_GetTopProd.TabIndex = 1
-        Me.Btn_GetTopProd.Text = "Locate"
-        Me.Btn_GetTopProd.UseVisualStyleBackColor = True
-        '
-        'LayoutPanel_Global
-        '
-        Me.LayoutPanel_Global.ColumnCount = 1
-        Me.LayoutPanel_Global.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.LayoutPanel_Global.Controls.Add(Me.LayoutPanel_PathButton, 0, 1)
-        Me.LayoutPanel_Global.Controls.Add(Me.Box_FilePath, 0, 0)
-        Me.LayoutPanel_Global.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LayoutPanel_Global.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutPanel_Global.Name = "LayoutPanel_Global"
-        Me.LayoutPanel_Global.RowCount = 2
-        Me.LayoutPanel_Global.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50.0!))
-        Me.LayoutPanel_Global.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.LayoutPanel_Global.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.LayoutPanel_Global.Size = New System.Drawing.Size(484, 186)
-        Me.LayoutPanel_Global.TabIndex = 1
-        '
         'Box_TopProds
         '
         Me.Box_TopProds.Controls.Add(Me.List_OutValues)
@@ -136,6 +109,33 @@ Partial Class MainForm
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(144, 124)
         Me.TableLayoutPanel1.TabIndex = 3
         '
+        'Btn_GetTopProd
+        '
+        Me.Btn_GetTopProd.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Btn_GetTopProd.Enabled = False
+        Me.Btn_GetTopProd.Location = New System.Drawing.Point(3, 3)
+        Me.Btn_GetTopProd.Name = "Btn_GetTopProd"
+        Me.Btn_GetTopProd.Size = New System.Drawing.Size(138, 44)
+        Me.Btn_GetTopProd.TabIndex = 1
+        Me.Btn_GetTopProd.Text = "Locate"
+        Me.Btn_GetTopProd.UseVisualStyleBackColor = True
+        '
+        'LayoutPanel_Global
+        '
+        Me.LayoutPanel_Global.ColumnCount = 1
+        Me.LayoutPanel_Global.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.LayoutPanel_Global.Controls.Add(Me.LayoutPanel_PathButton, 0, 1)
+        Me.LayoutPanel_Global.Controls.Add(Me.Box_FilePath, 0, 0)
+        Me.LayoutPanel_Global.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LayoutPanel_Global.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutPanel_Global.Name = "LayoutPanel_Global"
+        Me.LayoutPanel_Global.RowCount = 2
+        Me.LayoutPanel_Global.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50.0!))
+        Me.LayoutPanel_Global.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.LayoutPanel_Global.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.LayoutPanel_Global.Size = New System.Drawing.Size(484, 186)
+        Me.LayoutPanel_Global.TabIndex = 1
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -149,9 +149,9 @@ Partial Class MainForm
         Me.Box_FilePath.ResumeLayout(False)
         Me.Box_FilePath.PerformLayout()
         Me.LayoutPanel_PathButton.ResumeLayout(False)
-        Me.LayoutPanel_Global.ResumeLayout(False)
         Me.Box_TopProds.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.LayoutPanel_Global.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
