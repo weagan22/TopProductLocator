@@ -74,6 +74,11 @@ Public Class MainForm
             End If
         End If
     End Sub
+
+    Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Dim vers As Version = My.Application.Info.Version
+        Me.Text = "Top Product Locator " & vers.Major & "." & vers.Minor & "." & vers.Build
+    End Sub
 #End Region
 
 End Class
