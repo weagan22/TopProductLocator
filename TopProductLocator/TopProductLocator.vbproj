@@ -102,16 +102,26 @@
     <Compile Include="ProductFile.vb" />
     <Compile Include="ProductFileComparer.vb" />
     <Compile Include="RunLocate.vb" />
+    <Compile Include="TopProductLocate_UI.Designer.vb">
+      <DependentUpon>TopProductLocate_UI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TopProductLocate_UI.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
-      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TopProductLocate_UI.resx">
+      <DependentUpon>TopProductLocate_UI.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -157,6 +167,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ArrowUp.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MagGlass.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
