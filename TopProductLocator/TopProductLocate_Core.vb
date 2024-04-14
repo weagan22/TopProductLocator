@@ -16,7 +16,7 @@ Class TopProductLocate_Core
         OutputTopProducts(ProductList, OutputBox)
     End Sub
 
-    Shared Function GetProducts(FilePath As String, OutputParts As Boolean, StatusLabel As ToolStripStatusLabel) As List(Of ProductFile)
+    Private Shared Function GetProducts(FilePath As String, OutputParts As Boolean, StatusLabel As ToolStripStatusLabel) As List(Of ProductFile)
         Dim FileList() As String = Directory.GetFiles(FilePath, "*", SearchOption.TopDirectoryOnly)
         Dim RetProductList = New List(Of ProductFile)
 
@@ -44,7 +44,7 @@ Class TopProductLocate_Core
         Return RetProductList
     End Function
 
-    Shared Function StatusCount(FileList() As String) As Integer
+    Private Shared Function StatusCount(FileList() As String) As Integer
         'Get the number of files that are going to be checked to provide status
         Dim ReturnFileCount As Integer
         For Each StrFile As String In FileList
@@ -58,7 +58,7 @@ Class TopProductLocate_Core
         Return ReturnFileCount
     End Function
 
-    Shared Sub CheckChildren(ProductList As List(Of ProductFile))
+    Private Shared Sub CheckChildren(ProductList As List(Of ProductFile))
         'Check each of the products to see if they are a child of any of the others
 
         For Each Prod In ProductList 'Check each product
@@ -71,7 +71,7 @@ Class TopProductLocate_Core
         Next
     End Sub
 
-    Shared Sub OutputTopProducts(ProductList As List(Of ProductFile), OutputBox As ListBox)
+    Private Shared Sub OutputTopProducts(ProductList As List(Of ProductFile), OutputBox As ListBox)
 
         'For each of the products, output to the listbox if the IsChild handle has not been set
         For Each Prod In ProductList

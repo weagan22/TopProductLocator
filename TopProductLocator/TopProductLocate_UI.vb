@@ -47,7 +47,7 @@ Public Class TopProductLocate_UI
     End Sub
 
 
-#Region "Enter key to run on all features"
+#Region "Enter Key --> Run, all features"
     Private Sub Txt_FilePath_KeyDown(sender As Object, e As KeyEventArgs) Handles Txt_FilePath.KeyDown
         Call EnterKeyRun(sender, e)
     End Sub
@@ -60,7 +60,7 @@ Public Class TopProductLocate_UI
     Private Sub Btn_GetTopProd_KeyDown(sender As Object, e As KeyEventArgs) Handles Btn_GetTopProd.KeyDown
         Call EnterKeyRun(sender, e)
     End Sub
-    Sub EnterKeyRun(sender As Object, e As KeyEventArgs)
+    Private Sub EnterKeyRun(sender As Object, e As KeyEventArgs)
         If e.KeyValue = Keys.Enter Then
             If Btn_GetTopProd.Enabled Then
                 Call Btn_GetTopProd_Click(sender, e)
