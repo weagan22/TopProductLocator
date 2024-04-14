@@ -28,7 +28,7 @@ Public Class TopProductLocate_UI
                     Throw New Exception("Specified directory does not exist.")
                 End If
 
-                RunLocate.Run(FilePath)
+                TopProductLocate_Core.Execute(FilePath, Chk_GetParts.Checked, ToolStripStatusLabel1, List_OutValues)
 
             End If
 
@@ -39,7 +39,7 @@ Public Class TopProductLocate_UI
 
             Try 'Finally, make sure file alerts get turned back on in CATIA
                 ToolStripStatusLabel1.Text = "Ready..."
-                MainForm.CATIA.DisplayFileAlerts = True
+                CATIA.DisplayFileAlerts = True
             Catch ex2 As Exception
 
             End Try

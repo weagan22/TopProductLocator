@@ -17,9 +17,9 @@ Public Class ProductFile
 
         If IsProduct Then 'Get the products children, skips this for parts
             'Open the file for reading in CATIA
-            MainForm.CATIA.DisplayFileAlerts = False
-            Dim Doc As Document = MainForm.CATIA.Application.Documents.Read(FilePath)
-            MainForm.CATIA.DisplayFileAlerts = True
+            CATIA.DisplayFileAlerts = False
+            Dim Doc As Document = CATIA.Application.Documents.Read(FilePath)
+            CATIA.DisplayFileAlerts = True
 
             'Find all of its child products
             GetChildren(Doc.Product)

@@ -76,7 +76,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CATIA_Interface.vb" />
+    <Compile Include="CAT_Interface.vb" />
     <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +88,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -101,7 +102,7 @@
     </Compile>
     <Compile Include="ProductFile.vb" />
     <Compile Include="ProductFileComparer.vb" />
-    <Compile Include="RunLocate.vb" />
+    <Compile Include="TopProductLocate_Core.vb" />
     <Compile Include="TopProductLocate_UI.Designer.vb">
       <DependentUpon>TopProductLocate_UI.vb</DependentUpon>
     </Compile>
