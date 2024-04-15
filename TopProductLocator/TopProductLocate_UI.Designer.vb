@@ -28,13 +28,13 @@ Partial Class TopProductLocate_UI
         Me.Box_TopProds = New System.Windows.Forms.GroupBox()
         Me.List_OutValues = New System.Windows.Forms.ListBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Btn_GetTopProd = New System.Windows.Forms.Button()
         Me.Chk_GetParts = New System.Windows.Forms.CheckBox()
         Me.Box_FilePath = New System.Windows.Forms.GroupBox()
         Me.Txt_FilePath = New System.Windows.Forms.TextBox()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Btn_GetTopProd = New System.Windows.Forms.Button()
         Me.LayoutPanel_Global.SuspendLayout()
         Me.LayoutPanel_PathButton.SuspendLayout()
         Me.Box_TopProds.SuspendLayout()
@@ -96,8 +96,8 @@ Partial Class TopProductLocate_UI
         Me.List_OutValues.Name = "List_OutValues"
         Me.List_OutValues.Size = New System.Drawing.Size(316, 85)
         Me.List_OutValues.TabIndex = 0
-        Me.ToolTip1.SetToolTip(Me.List_OutValues, "Returned list of products that are not a child of any other products in the speci" &
-        "fied directory.")
+        Me.ToolTip1.SetToolTip(Me.List_OutValues, "Search Results: Products that are not a child of any other products in the specif" &
+        "ied directory.")
         '
         'TableLayoutPanel1
         '
@@ -114,6 +114,21 @@ Partial Class TopProductLocate_UI
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(144, 104)
         Me.TableLayoutPanel1.TabIndex = 0
         '
+        'Btn_GetTopProd
+        '
+        Me.Btn_GetTopProd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_GetTopProd.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Btn_GetTopProd.Enabled = False
+        Me.Btn_GetTopProd.Image = Global.TopProductLocator.My.Resources.Resources.MagGlass
+        Me.Btn_GetTopProd.Location = New System.Drawing.Point(3, 3)
+        Me.Btn_GetTopProd.Name = "Btn_GetTopProd"
+        Me.Btn_GetTopProd.Size = New System.Drawing.Size(138, 44)
+        Me.Btn_GetTopProd.TabIndex = 0
+        Me.Btn_GetTopProd.Text = "Run Search"
+        Me.Btn_GetTopProd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.ToolTip1.SetToolTip(Me.Btn_GetTopProd, "Locate the top product(s) within the specified file path.")
+        Me.Btn_GetTopProd.UseVisualStyleBackColor = True
+        '
         'Chk_GetParts
         '
         Me.Chk_GetParts.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -124,8 +139,7 @@ Partial Class TopProductLocate_UI
         Me.Chk_GetParts.Size = New System.Drawing.Size(138, 17)
         Me.Chk_GetParts.TabIndex = 1
         Me.Chk_GetParts.Text = "Include Parts"
-        Me.ToolTip1.SetToolTip(Me.Chk_GetParts, "When checked, the locate function also returns parts that are not contained in a " &
-        "parent product.")
+        Me.ToolTip1.SetToolTip(Me.Chk_GetParts, "Return parts that do not have a parent product.")
         Me.Chk_GetParts.UseVisualStyleBackColor = True
         '
         'Box_FilePath
@@ -137,8 +151,8 @@ Partial Class TopProductLocate_UI
         Me.Box_FilePath.Size = New System.Drawing.Size(478, 44)
         Me.Box_FilePath.TabIndex = 0
         Me.Box_FilePath.TabStop = False
-        Me.Box_FilePath.Text = "File Path"
-        Me.ToolTip1.SetToolTip(Me.Box_FilePath, "File Path")
+        Me.Box_FilePath.Text = "File Path/Directory"
+        Me.ToolTip1.SetToolTip(Me.Box_FilePath, "File Path/Directory")
         '
         'Txt_FilePath
         '
@@ -158,29 +172,15 @@ Partial Class TopProductLocate_UI
         Me.StatusStrip1.Size = New System.Drawing.Size(484, 20)
         Me.StatusStrip1.TabIndex = 1
         Me.StatusStrip1.Text = "StatusStrip1"
+        Me.ToolTip1.SetToolTip(Me.StatusStrip1, "Status")
         '
         'ToolStripStatusLabel1
         '
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(469, 15)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(438, 15)
         Me.ToolStripStatusLabel1.Spring = True
         Me.ToolStripStatusLabel1.Text = "Ready..."
         Me.ToolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Btn_GetTopProd
-        '
-        Me.Btn_GetTopProd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Btn_GetTopProd.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Btn_GetTopProd.Enabled = False
-        Me.Btn_GetTopProd.Image = Global.TopProductLocator.My.Resources.Resources.MagGlass
-        Me.Btn_GetTopProd.Location = New System.Drawing.Point(3, 3)
-        Me.Btn_GetTopProd.Name = "Btn_GetTopProd"
-        Me.Btn_GetTopProd.Size = New System.Drawing.Size(138, 44)
-        Me.Btn_GetTopProd.TabIndex = 0
-        Me.Btn_GetTopProd.Text = "Run Search"
-        Me.Btn_GetTopProd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.ToolTip1.SetToolTip(Me.Btn_GetTopProd, "Locate the top product(s) within the specified file path.")
-        Me.Btn_GetTopProd.UseVisualStyleBackColor = True
         '
         'TopProductLocate_UI
         '
