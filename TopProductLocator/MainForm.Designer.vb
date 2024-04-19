@@ -23,21 +23,13 @@ Partial Class MainForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
-        Me.TPL_UI = New TopProductLocator.TopProductLocate_UI()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.TPL_UI = New TopProductLocator.TopProductLocate_UI()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'TPL_UI
-        '
-        Me.TPL_UI.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TPL_UI.Location = New System.Drawing.Point(3, 3)
-        Me.TPL_UI.Name = "TPL_UI"
-        Me.TPL_UI.Size = New System.Drawing.Size(478, 160)
-        Me.TPL_UI.TabIndex = 0
         '
         'TableLayoutPanel1
         '
@@ -66,8 +58,18 @@ Partial Class MainForm
         'ToolStripStatusLabel1
         '
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(48, 15)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(438, 15)
+        Me.ToolStripStatusLabel1.Spring = True
         Me.ToolStripStatusLabel1.Text = "Ready..."
+        Me.ToolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'TPL_UI
+        '
+        Me.TPL_UI.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TPL_UI.Location = New System.Drawing.Point(3, 3)
+        Me.TPL_UI.Name = "TPL_UI"
+        Me.TPL_UI.Size = New System.Drawing.Size(478, 160)
+        Me.TPL_UI.TabIndex = 0
         '
         'MainForm
         '
