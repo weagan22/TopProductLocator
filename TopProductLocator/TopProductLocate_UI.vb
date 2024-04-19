@@ -1,6 +1,8 @@
 ﻿Imports System.IO
 
 Public Class TopProductLocate_UI
+    Friend StatusLabel As ToolStripStatusLabel
+
     Private Sub Txt_FilePath_TextChanged(sender As Object, e As EventArgs) Handles Txt_FilePath.TextChanged
         If System.IO.Directory.Exists(Txt_FilePath.Text) Then
             Btn_GetTopProd.Enabled = True
@@ -28,21 +30,22 @@ Public Class TopProductLocate_UI
                     Throw New Exception("Specified directory does not exist.")
                 End If
 
-                TopProductLocate_Core.Execute(FilePath, Chk_GetParts.Checked, ToolStripStatusLabel1, List_OutValues)
+                TopProductLocate_Core.Execute(FilePath, Chk_GetParts.Checked, StatusLabel, List_OutValues)
 
             End If
 
-            ToolStripStatusLabel1.Text = "Ready..."
+            StatusLabel.Text = "Ready..."
 
         Catch ex As Exception 'Handle catastrophic error
             MsgBox("Error occured while locating top product." & vbNewLine & vbNewLine & ex.Message, MessageBoxIcon.Warning, "Error")
 
             Try 'Finally, make sure file alerts get turned back on in CATIA
-                ToolStripStatusLabel1.Text = "Ready..."
                 CATIA.DisplayFileAlerts = True
             Catch ex2 As Exception
 
             End Try
+        Finally
+            StatusLabel.Text = "Ready..."
         End Try
     End Sub
 

@@ -32,15 +32,12 @@ Partial Class TopProductLocate_UI
         Me.Chk_GetParts = New System.Windows.Forms.CheckBox()
         Me.Box_FilePath = New System.Windows.Forms.GroupBox()
         Me.Txt_FilePath = New System.Windows.Forms.TextBox()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.LayoutPanel_Global.SuspendLayout()
         Me.LayoutPanel_PathButton.SuspendLayout()
         Me.Box_TopProds.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Box_FilePath.SuspendLayout()
-        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'LayoutPanel_Global
@@ -49,11 +46,10 @@ Partial Class TopProductLocate_UI
         Me.LayoutPanel_Global.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.LayoutPanel_Global.Controls.Add(Me.LayoutPanel_PathButton, 0, 1)
         Me.LayoutPanel_Global.Controls.Add(Me.Box_FilePath, 0, 0)
-        Me.LayoutPanel_Global.Controls.Add(Me.StatusStrip1, 0, 2)
         Me.LayoutPanel_Global.Dock = System.Windows.Forms.DockStyle.Fill
         Me.LayoutPanel_Global.Location = New System.Drawing.Point(0, 0)
         Me.LayoutPanel_Global.Name = "LayoutPanel_Global"
-        Me.LayoutPanel_Global.RowCount = 3
+        Me.LayoutPanel_Global.RowCount = 2
         Me.LayoutPanel_Global.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50.0!))
         Me.LayoutPanel_Global.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.LayoutPanel_Global.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
@@ -72,7 +68,7 @@ Partial Class TopProductLocate_UI
         Me.LayoutPanel_PathButton.Name = "LayoutPanel_PathButton"
         Me.LayoutPanel_PathButton.RowCount = 1
         Me.LayoutPanel_PathButton.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.LayoutPanel_PathButton.Size = New System.Drawing.Size(478, 110)
+        Me.LayoutPanel_PathButton.Size = New System.Drawing.Size(478, 130)
         Me.LayoutPanel_PathButton.TabIndex = 2
         '
         'Box_TopProds
@@ -81,7 +77,7 @@ Partial Class TopProductLocate_UI
         Me.Box_TopProds.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Box_TopProds.Location = New System.Drawing.Point(3, 3)
         Me.Box_TopProds.Name = "Box_TopProds"
-        Me.Box_TopProds.Size = New System.Drawing.Size(322, 104)
+        Me.Box_TopProds.Size = New System.Drawing.Size(322, 124)
         Me.Box_TopProds.TabIndex = 1
         Me.Box_TopProds.TabStop = False
         Me.Box_TopProds.Text = "Top Product(s)"
@@ -94,7 +90,7 @@ Partial Class TopProductLocate_UI
         Me.List_OutValues.ItemHeight = 16
         Me.List_OutValues.Location = New System.Drawing.Point(3, 16)
         Me.List_OutValues.Name = "List_OutValues"
-        Me.List_OutValues.Size = New System.Drawing.Size(316, 85)
+        Me.List_OutValues.Size = New System.Drawing.Size(316, 105)
         Me.List_OutValues.TabIndex = 0
         Me.ToolTip1.SetToolTip(Me.List_OutValues, "Search Results: Products that are not a child of any other products in the specif" &
         "ied directory.")
@@ -111,7 +107,7 @@ Partial Class TopProductLocate_UI
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(144, 104)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(144, 124)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'Btn_GetTopProd
@@ -164,24 +160,6 @@ Partial Class TopProductLocate_UI
         Me.Txt_FilePath.Text = "File path here..."
         Me.ToolTip1.SetToolTip(Me.Txt_FilePath, "File path here...")
         '
-        'StatusStrip1
-        '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 166)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(484, 20)
-        Me.StatusStrip1.TabIndex = 1
-        Me.StatusStrip1.Text = "StatusStrip1"
-        Me.ToolTip1.SetToolTip(Me.StatusStrip1, "Status")
-        '
-        'ToolStripStatusLabel1
-        '
-        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(438, 15)
-        Me.ToolStripStatusLabel1.Spring = True
-        Me.ToolStripStatusLabel1.Text = "Ready..."
-        Me.ToolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
         'TopProductLocate_UI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -190,15 +168,12 @@ Partial Class TopProductLocate_UI
         Me.Name = "TopProductLocate_UI"
         Me.Size = New System.Drawing.Size(484, 186)
         Me.LayoutPanel_Global.ResumeLayout(False)
-        Me.LayoutPanel_Global.PerformLayout()
         Me.LayoutPanel_PathButton.ResumeLayout(False)
         Me.Box_TopProds.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
         Me.Box_FilePath.ResumeLayout(False)
         Me.Box_FilePath.PerformLayout()
-        Me.StatusStrip1.ResumeLayout(False)
-        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -212,7 +187,5 @@ Partial Class TopProductLocate_UI
     Friend WithEvents Chk_GetParts As CheckBox
     Friend WithEvents Box_FilePath As GroupBox
     Friend WithEvents Txt_FilePath As TextBox
-    Friend WithEvents StatusStrip1 As StatusStrip
-    Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
     Friend WithEvents ToolTip1 As ToolTip
 End Class
